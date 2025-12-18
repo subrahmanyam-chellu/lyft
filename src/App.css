@@ -1,0 +1,59 @@
+/* Hex Code
+
+Color name
+
+RGB
+
+HSL
+
+CMYK
+
+#523BE4
+
+Royal Blue
+
+82, 59, 228
+
+248, 76, 56
+
+64, 74, 0, 11
+
+#EA0B8C
+
+Hollywood Cerise
+
+234, 11, 140
+
+325, 91, 48
+
+0, 95, 40, 8
+
+#0C0B31
+
+Haiti
+
+12, 11, 49
+
+242, 63, 12
+
+76, 78, 0, 81
+
+#FFFFFF
+
+White
+
+255, 255, 255
+
+0, 0, 100
+
+0, 0, 0, 0 */
+
+.btnGet{
+    background-color: #523BE4;
+    color: white;
+    border-radius: 50rem;
+    height: 50px;
+    width: 90px;
+    font-weight: bolder;
+    font-size: 1rem;
+}
