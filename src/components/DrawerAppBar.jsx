@@ -23,13 +23,9 @@ import PositionedMenu from './PositionedMenu';
 import BasicSelect from './BasicSelect';
 
 
-function useDrawerWidth() {
-  const isMobile = useMediaQuery('(max-width:600px)');
-  return isMobile ? 240 : 360;
-}
 
 
-const drawerWidth = '600px';
+//const drawerWidth = useWindowWidth();
 const navItemsB = ['RIDER', 'DRIVER', 'BUSINESS', 'LOGIN', 'SIGN UP'];
 const navItemsD = [{ name: 'RIDER', e1: 'Cities', e2: 'For Business', e3: 'Help', btn: 'Sign up to ride' }, { name: 'DRIVER', e1: 'Earnings', e2: 'Cities', e3: 'Help', btn: 'Apply to drive' }];
 const navItemsDsingle = ['BUSINESS', 'LOGIN'];
@@ -43,9 +39,26 @@ const style = {
   backgroundColor: 'background.paper',
 };
 
+function useWindowWidth() {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+      const handleResize = () => setWidth(window.innerWidth);
+
+      window.addEventListener("resize", handleResize);
+      // cleanup on unmount
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return width;
+  }
+
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  
+  const windowWidth=useWindowWidth();
+  const drawerWidth=windowWidth;
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -57,7 +70,7 @@ function DrawerAppBar(props) {
   // }
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', overflow: 'auto', height: '100%' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', overflow: 'auto', height: '100%'}}>
       <Typography variant="h6" sx={{ my: 2 }}>
         <Box
           sx={{
@@ -189,8 +202,8 @@ function DrawerAppBar(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: 'flex', sm: 'flex' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width:drawerWidth},
           }}
 
         >
