@@ -70,7 +70,7 @@ function DrawerAppBar(props) {
   // }
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', overflow: 'auto', height: '100%'}}>
+    <Box sx={{ textAlign: 'center', overflow: 'auto', height: '100%'}}>
       <Typography variant="h6" sx={{ my: 2 }}>
         <Box
           sx={{
@@ -98,7 +98,7 @@ function DrawerAppBar(props) {
               Log in
             </Button>
             <IconButton sx={{ color: 'black', height: '55px' }}>
-              <CloseIcon sx={{ fontSize: '50' }} />
+              <CloseIcon onClick={handleDrawerToggle} sx={{ fontSize: '50' }} />
             </IconButton>
           </Box>
         </Box>
