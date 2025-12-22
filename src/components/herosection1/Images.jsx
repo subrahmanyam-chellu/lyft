@@ -9,7 +9,7 @@ const Images = () => {
         maxWidth: '584px',
         height: '100%',
         width:'100%',
-        display: 'flex', justifyContent:{xs:'center', lg:'flex-start'}, paddingRight:{xs:'15px', lg:'16px'}, paddingBottom:{xs:'0px', lg:'6px'}
+        display: 'flex', justifyContent:'flex-start', paddingRight:{xs:'15px', lg:'16px'}, paddingBottom:{xs:'0px', lg:'6px'}
       }}>
         <img src={image} alt='hero image' style={{ width: '100%' }} />
       </Box>

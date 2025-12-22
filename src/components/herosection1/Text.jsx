@@ -7,6 +7,7 @@ const Text = () => {
             <Box sx={{
                 maxWidth: '471px', height: '100%', 
                 width:'100%', display: 'flex', flexDirection: 'column',
+                marginRight:{lg:'170px'},
                 alignItems:{xs:'center', lg:'flex-start'}
             }}>
                 <Box>
