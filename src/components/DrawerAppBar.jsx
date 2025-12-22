@@ -21,6 +21,7 @@ import { useMediaQuery } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import PositionedMenu from './PositionedMenu';
 import BasicSelect from './BasicSelect';
+import HeroSection from '/src/components/herosection/HeroSection.jsx';
 
 
 
@@ -184,7 +185,7 @@ function DrawerAppBar(props) {
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'block', md: 'block', lg: 'none', } }}
+              sx={{ mr: 0, display: { sm: 'block', md: 'block', lg: 'none', } }}
             >
               <MenuIcon sx={{ fontSize: 40 }} />
             </IconButton>
@@ -210,9 +211,10 @@ function DrawerAppBar(props) {
           {drawer}
         </Drawer>
       </nav>
-      {/* <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-
+      {/* <Box component="main">
+        <Toolbar sx={{height:'100%', width:'100%', margin:'80px'}}>
+           <HeroSection/>
+        </Toolbar>
       </Box> */}
     </Box>
   );
