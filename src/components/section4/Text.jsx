@@ -49,11 +49,11 @@ const Text = () => {
             },
             {
                 breakpoint: 900, // tablets
-                settings: { slidesToShow: 2, slidesToScroll: 2 }
+                settings: { slidesToShow: 2, slidesToScroll: 1 }
             },
             {
                 breakpoint: 1200, // large screens
-                settings: { slidesToShow: 3, slidesToScroll: 3 }
+                settings: { slidesToShow: 3, slidesToScroll: 1 }
             }
             
             
@@ -73,7 +73,7 @@ const Text = () => {
                 //marginLeft:{lg:'128px'}, marginRight:{lg:'16px'},
                 // alignItems:'flex-start'
             }}>
-                <Box sx={{ display: 'felx', flexDirection: 'column', gap: '8px', justifyContent: { xs: 'center', lg: 'flex-start' } }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: '8px', justifyContent: { xs: 'center', lg: 'flex-start' } }}>
                     <Typography sx={{ typography: { xs: 'h5', sm: 'h4', lg: 'h4' }, fontSize: '36px', fontWeight: '900', marginBottom: '16px', marginTop: '11px', textAlign: { xs: 'center', lg: 'start' } }}>How you get there is up to you</Typography>
                     <Typography>We’ve got options to get you where you’re going. Choose a ride that suits your mood and budget.*</Typography>
                 </Box>
