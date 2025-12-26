@@ -40,21 +40,23 @@ const Text = () => {
         dots: false,
         infinite: false,
         speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1200, // large screens
-                settings: { slidesToShow: 3, slidesToScroll: 3 }
+                breakpoint: 600, // mobile
+                settings: { slidesToShow: 2, slidesToScroll: 1 }
             },
             {
                 breakpoint: 900, // tablets
                 settings: { slidesToShow: 2, slidesToScroll: 2 }
             },
             {
-                breakpoint: 600, // mobile
-                settings: { slidesToShow: 2, slidesToScroll: 1 }
+                breakpoint: 1200, // large screens
+                settings: { slidesToShow: 3, slidesToScroll: 3 }
             }
+            
+            
         ]
     };
 
