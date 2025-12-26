@@ -20,8 +20,11 @@ import { Height, MarginOutlined } from '@mui/icons-material';
 import { useMediaQuery } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import PositionedMenu from './PositionedMenu';
-import BasicSelect from './BasicSelect';
+import BasicSelect from './LanguageAccordion';
 import HeroSection from '/src/components/herosection/HeroSection.jsx';
+import HeroSection1 from './herosection1/HeroSection1';
+import Section1 from './section1/Section1';
+import LanguageAccordion from './LanguageAccordion';
 
 
 
@@ -41,25 +44,25 @@ const style = {
 };
 
 function useWindowWidth() {
-    const [width, setWidth] = React.useState(window.innerWidth);
+  const [width, setWidth] = React.useState(window.innerWidth);
 
-    React.useEffect(() => {
-      const handleResize = () => setWidth(window.innerWidth);
+  React.useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
 
-      window.addEventListener("resize", handleResize);
-      // cleanup on unmount
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    window.addEventListener("resize", handleResize);
+    // cleanup on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    return width;
-  }
+  return width;
+}
 
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  
-  const windowWidth=useWindowWidth();
-  const drawerWidth=windowWidth;
+
+  const windowWidth = useWindowWidth();
+  const drawerWidth = windowWidth;
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -71,7 +74,7 @@ function DrawerAppBar(props) {
   // }
 
   const drawer = (
-    <Box sx={{ textAlign: 'center', overflow: 'auto', height: '100%'}}>
+    <Box sx={{ textAlign: 'center', overflow: 'auto', height: '100%' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         <Box
           sx={{
@@ -150,7 +153,7 @@ function DrawerAppBar(props) {
           </React.Fragment>
         ))}
       </List>
-      <BasicSelect></BasicSelect>
+      <LanguageAccordion/>
     </Box>
   );
 
@@ -204,7 +207,7 @@ function DrawerAppBar(props) {
           }}
           sx={{
             display: { xs: 'flex', sm: 'flex' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width:drawerWidth},
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
 
         >
@@ -212,8 +215,9 @@ function DrawerAppBar(props) {
         </Drawer>
       </nav>
       {/* <Box component="main">
-        <Toolbar sx={{height:'100%', width:'100%', margin:'80px'}}>
-           <HeroSection/>
+        <Toolbar sx={{ height: '100%', width: '100%', margin: '80px' }}>
+          <HeroSection1 />
+          <Section1 />
         </Toolbar>
       </Box> */}
     </Box>

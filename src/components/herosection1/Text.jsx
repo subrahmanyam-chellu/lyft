@@ -3,7 +3,7 @@ import React from 'react'
 
 const Text = () => {
     return (
-        <Box sx={{paddingRight:{xs:'0px', lg:'16px'}}}>
+        <Box sx={{marginRight:{xs:'0px', lg:'16px'}}}>
             <Box sx={{
                 maxWidth: '471px', height: '100%', 
                 width:'100%', display: 'flex', flexDirection: 'column',

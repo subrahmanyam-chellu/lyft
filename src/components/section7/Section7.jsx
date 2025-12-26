@@ -2,12 +2,12 @@ import React from 'react'
 import Banner from './Banner'
 import { Box } from '@mui/material'
 
-const HeroSection1 = () => {
+const Section7 = () => {
   return (
-    <Box sx={{paddingX:{xs:'15px', sm:'120px', lg:'80px'}}}> 
+    <Box sx={{paddingX:{xs:'20px', sm:'80px', lg:'80px'}}}>
         <Banner/>
     </Box>
   )
 }
 
-export default HeroSection1
+export default Section7
