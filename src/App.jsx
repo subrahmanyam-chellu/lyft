@@ -9,6 +9,10 @@ import image5 from '/src/assets/five.png';
 import image6 from '/src/assets/six.png';
 import Carousel from './components/Carousel.jsx';
 import { Box } from '@mui/material';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import HeroSection from './components/herosection/HeroSection.jsx';
 import Section1 from './components/section1/Section1.jsx';
 import Section2 from './components/section2/Section2.jsx';
